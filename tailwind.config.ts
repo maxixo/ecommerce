@@ -1,7 +1,8 @@
-// tailwind.config.ts
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
+import { type Config } from "tailwindcss";
 
-const config: Config = {
+export default {
+  darkMode: "class", // ✅ FIXED — no brackets, just a string
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,16 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        // add other tokens if needed
+        border: "hsl(var(--border))",
+        card: "hsl(var(--card))",
+        primary: "hsl(var(--primary))",
+        secondary: "hsl(var(--secondary))",
+      },
+      borderRadius: {
+        xl: "var(--radius)",
       },
     },
   },
   plugins: [],
-};
-
-export default config;
+} satisfies Config;

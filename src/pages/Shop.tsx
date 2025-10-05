@@ -68,6 +68,7 @@ const Shop = () => {
     toast.success(`${product.name} added to cart!`);
   };
 
+
   return (
     <div className="min-h-screen">
       <Navbar />
