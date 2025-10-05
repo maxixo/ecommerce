@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { useAuth } from "./../context/AuthContext";
 import { Separator } from "@/components/ui/separator";
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,27 +31,24 @@ const Login = () => {
     }
 
     setLoading(true);
-    try {
-      await signIn(email, password);
+    const { error } = await signIn(email, password);
+    setLoading(false);
+
+    if (error) {
+      toast.error(error.message || "Failed to sign in");
+    } else {
       toast.success("Login successful!");
       navigate("/");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to sign in");
-    } finally {
-      setLoading(false);
     }
   };
 
   const handleGoogleSignIn = async () => {
     setLoading(true);
-    try {
-      await signInWithGoogle();
-      toast.success("Signed in with Google!");
-      navigate("/");
-    } catch (error: any) {
+    const { error } = await signInWithGoogle();
+    setLoading(false);
+
+    if (error) {
       toast.error(error.message || "Failed to sign in with Google");
-    } finally {
-      setLoading(false);
     }
   };
 

@@ -2,10 +2,14 @@ import { ShoppingCart, Package } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useCart } from "././../../src/context/CartContext";
+import { useAuth } from "./../../src/context/AuthContext";
+
+
 
 const Navbar = () => {
   const location = useLocation();
   const { items } = useCart();
+  const { user, logout } = useAuth();
   const cartItemsCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   const isActive = (path: string) => location.pathname === path;
@@ -16,7 +20,7 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <Package className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold text-red-200">ShipStore</span>
+            <span className="text-xl font-bold">ShipStore</span>
           </Link>
 
           <div className="flex items-center gap-6">
@@ -42,11 +46,21 @@ const Navbar = () => {
                 )}
               </Button>
             </Link>
-            <Link to="/login">
-              <Button variant={isActive("/login") ? "default" : "outline"} size="sm">
-                Login
+            {user ? (
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={logout}
+              >
+                Logout
               </Button>
-            </Link>
+            ) : (
+              <Link to="/login">
+                <Button variant={isActive("/login") ? "default" : "outline"} size="sm">
+                  Login
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

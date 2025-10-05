@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { useAuth } from "./../context/AuthContext";
 import { Separator } from "./../components/ui/separator";
 
+
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,27 +43,28 @@ const Signup = () => {
     }
 
     setLoading(true);
-    try {
-      await signUp(email, password);
+    const { error } = await signUp(email, password);
+    setLoading(false);
+
+    if (error) {
+      if (error.message.includes("already registered") || error.message.includes("User already registered")) {
+        toast.error("This email is already registered");
+      } else {
+        toast.error(error.message || "Failed to create account");
+      }
+    } else {
       toast.success("Account created successfully!");
       navigate("/");
-    } catch (error: any) {
-      toast.error(error.message || "Failed to create account");
-    } finally {
-      setLoading(false);
     }
   };
 
   const handleGoogleSignIn = async () => {
     setLoading(true);
-    try {
-      await signInWithGoogle();
-      toast.success("Signed in with Google!");
-      navigate("/");
-    } catch (error: any) {
+    const { error } = await signInWithGoogle();
+    setLoading(false);
+
+    if (error) {
       toast.error(error.message || "Failed to sign in with Google");
-    } finally {
-      setLoading(false);
     }
   };
 
