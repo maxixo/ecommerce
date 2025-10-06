@@ -8,6 +8,8 @@ import FeaturedProducts from "./../components/FeaturedProducts";
 import CompanyMotto from "@/components/CompanyMotto";
 import ItemsShowcase from "@/components/ItemsShowcase";
 import { toast } from "sonner";
+import Footer from "@/components/Footer";
+
 import product1 from "@/assets/product-1.jpg";
 import product2 from "@/assets/product-2.jpg";
 import product3 from "@/assets/product-3.jpg";
@@ -58,6 +60,76 @@ const products: Product[] = [
     image: product6,
     description: "Complete kit with tape and labels",
   },
+  {
+    id: 7,
+    name: "Medium Shipping Box",
+    price: 5.99,
+    image: product1,
+    description: "Versatile box for everyday shipping",
+  },
+  {
+    id: 8,
+    name: "Premium Envelope",
+    price: 3.99,
+    image: product2,
+    description: "High-quality envelope with padding",
+  },
+  {
+    id: 9,
+    name: "Extra Large Box",
+    price: 9.99,
+    image: product3,
+    description: "Maximum capacity for bulk items",
+  },
+  {
+    id: 10,
+    name: "Poly Mailer",
+    price: 2.49,
+    image: product4,
+    description: "Lightweight waterproof mailer",
+  },
+  {
+    id: 11,
+    name: "Starter Pack",
+    price: 15.99,
+    image: product5,
+    description: "Essential supplies for new shippers",
+  },
+  {
+    id: 12,
+    name: "Deluxe Supplies Kit",
+    price: 34.99,
+    image: product6,
+    description: "Premium kit with all accessories",
+  },
+  {
+    id: 13,
+    name: "Small Box Set",
+    price: 12.99,
+    image: product1,
+    description: "Pack of 5 compact boxes",
+  },
+  {
+    id: 14,
+    name: "Document Mailer",
+    price: 2.29,
+    image: product2,
+    description: "Professional document protection",
+  },
+  {
+    id: 15,
+    name: "Moving Box Bundle",
+    price: 39.99,
+    image: product3,
+    description: "Complete moving box collection",
+  },
+  {
+    id: 16,
+    name: "Fragile Care Pack",
+    price: 24.99,
+    image: product4,
+    description: "Specialized kit for delicate items",
+  },
 ];
 
 const Shop = () => {
@@ -68,7 +140,6 @@ const Shop = () => {
     toast.success(`${product.name} added to cart!`);
   };
 
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -77,7 +148,7 @@ const Shop = () => {
       <ItemsShowcase />
       <FeaturedProducts />
       
-      <main className="container mx-auto px-4 py-16">
+      <main id="products" className="container mx-auto px-4 py-16">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Products</h2>
           <p className="text-lg text-muted-foreground">
@@ -85,7 +156,7 @@ const Shop = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
           ))}
@@ -93,6 +164,7 @@ const Shop = () => {
       </main>
       
       <Testimonials />
+      <Footer />
     </div>
   );
 };
