@@ -4,7 +4,7 @@ const CompanyMotto = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent to-primary/5" />
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-6 inline-block rounded-full bg-primary/10 px-6 py-2">
+          <div className="mb-6 inline-block rounded-full border-1 bg-primary/10 px-6 py-2">
             <span className="text-sm font-semibold text-primary">Our Promise</span>
           </div>
           <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
@@ -20,4 +20,3 @@ const CompanyMotto = () => {
 };
 
 export default CompanyMotto;
-

@@ -9,13 +9,38 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-      },
+  default: `
+    bg-[var(--button-primary-bg)]
+    text-[var(--button-primary-text)]
+    hover:bg-[var(--button-primary-bg-hover)]
+  `,
+  destructive: `
+    bg-[var(--button-destructive-bg)]
+    text-[var(--button-destructive-text)]
+    hover:bg-[var(--button-destructive-bg-hover)]
+  `,
+  outline: `
+    border border-[var(--button-outline-border)]
+    bg-[var(--button-outline-bg)]
+    hover:bg-[var(--button-outline-hover-bg)]
+    hover:text-[var(--button-outline-hover-text)]
+  `,
+  secondary: `
+    bg-[var(--button-secondary-bg)]
+    text-[var(--button-secondary-text)]
+    hover:bg-[var(--button-secondary-bg-hover)]
+  `,
+  ghost: `
+    hover:bg-[var(--button-ghost-bg-hover)]
+    hover:text-[var(--button-ghost-text-hover)]
+  `,
+  link: `
+    text-[var(--button-link-text)]
+    underline-offset-4
+    hover:underline
+  `,
+},
+
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",

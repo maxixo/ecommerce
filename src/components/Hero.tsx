@@ -17,7 +17,7 @@ const Hero = () => {
             <Button size="lg" className="gap-2">
               Shop Now <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline"  className="bg-blue-950 border-0 hover:">
               View Products
             </Button>
           </div>

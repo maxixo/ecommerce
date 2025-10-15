@@ -63,6 +63,33 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+     --button-primary-bg: #2563eb; /* blue-600 */
+  --button-primary-bg-hover: #1d4ed8; /* blue-700 */
+  --button-primary-text: #ffffff;
+
+  /* === Destructive === */
+  --button-destructive-bg: #dc2626; /* red-600 */
+  --button-destructive-bg-hover: #b91c1c; /* red-700 */
+  --button-destructive-text: #ffffff;
+
+  /* === Outline === */
+  --button-outline-border: #d1d5db; /* gray-300 */
+  --button-outline-bg: #ffffff;
+  --button-outline-hover-bg: #f3f4f6; /* gray-100 */
+  --button-outline-hover-text: #111827; /* gray-900 */
+
+  /* === Secondary === */
+  --button-secondary-bg: #f3f4f6; /* gray-100 */
+  --button-secondary-bg-hover: #e5e7eb; /* gray-200 */
+  --button-secondary-text: #111827; /* gray-900 */
+
+  /* === Ghost === */
+  --button-ghost-bg-hover: #f9fafb; /* gray-50 */
+  --button-ghost-text-hover: #1e3a8a; /* blue-800 */
+
+  /* === Link === */
+  --button-link-text: #2563eb; /* blue-600 */
 }
 
 /* Dark mode overrides */
@@ -113,7 +140,7 @@
   --card-bg: #1b263b;
   --card-text: #e0e0e0;
   --card-border: #2d3748;
-  
+
   --button-bg: #2563eb;
   --button-text: #ffffff;
   --button-border: #2563eb;

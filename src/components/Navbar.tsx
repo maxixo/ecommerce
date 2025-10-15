@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
   <nav
-  className="sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-card/60"
+  className="sticky top-0 z-50 border-0 backdrop-blur supports-[backdrop-filter]:bg-card/60"
   style={{
     backgroundColor: "var(--background)",
     color: "var(--foreground)",
