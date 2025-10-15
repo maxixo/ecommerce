@@ -10,8 +10,8 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   return (
-    <Card className="group overflow-hidden transition-all hover:shadow-lg">
-      <div className="aspect-square overflow-hidden bg-muted">
+    <Card className="group border-0 overflow-hidden transition-all hover:shadow-lg">
+      <div className="aspect-square overflow-hidden bg-gray-100">
         <img
           src={product.image}
           alt={product.name}
@@ -19,14 +19,14 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
         />
       </div>
       <CardContent className="p-4">
-        <h3 className="font-semibold text-foreground">{product.name}</h3>
-        <p className="mt-1 text-sm text-muted-foreground">{product.description}</p>
-        <p className="mt-2 text-lg font-bold text-primary">${product.price.toFixed(2)}</p>
+        <h3 className="font-semibold text-gray-900">{product.name}</h3>
+        <p className="mt-1 text-sm text-gray-500">{product.description}</p>
+        <p className="mt-2 text-lg font-bold text-blue-600">${product.price.toFixed(2)}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <Button
           onClick={() => onAddToCart(product)}
-          className="w-full"
+          className="w-full bg-blue-600 text-white hover:bg-blue-700"
           size="sm"
         >
           <ShoppingCart className="mr-2 h-4 w-4" />

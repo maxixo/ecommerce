@@ -1,7 +1,7 @@
 const CompanyMotto = () => {
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-accent to-primary/5" />
+      <div className="absolute inset-0 bg-blue-50  via-accent to-primary/5" />
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-6 inline-block rounded-full border-2 bg-primary/10 px-6 py-2">

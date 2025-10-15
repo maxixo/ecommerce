@@ -23,6 +23,8 @@ const App = () => (
       <CartProvider>
         <Toaster />
         <Sonner />
+
+       
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Shop />} />

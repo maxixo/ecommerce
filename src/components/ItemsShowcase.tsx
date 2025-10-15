@@ -71,13 +71,13 @@ const ItemsShowcase = () => {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Perfect for Every Household Item</h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-gray-500">
             Safe shipping solutions for all your belongings
           </p>
         </div>
 
         <div className="relative mx-auto max-w-4xl">
-          <div className="overflow-hidden rounded-xl bg-gradient-to-br from-primary/5 to-accent p-8 md:p-12">
+          <div className="overflow-hidden rounded-xl bg-blue-50 p-8 md:p-12">
             <div className="mb-8 text-center">
               <h3 className="text-2xl font-bold md:text-3xl">
                 {itemCategories[currentSlide].title}
@@ -118,7 +118,7 @@ const ItemsShowcase = () => {
                     }}
                     className={`h-2 w-2 rounded-full transition-all ${
                       index === currentSlide
-                        ? "w-8 bg-primary"
+                        ? "w-8 bg-blue-500"
                         : "bg-border hover:bg-primary/50"
                     }`}
                   />

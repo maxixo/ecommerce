@@ -74,62 +74,8 @@ const products: Product[] = [
     image: product2,
     description: "High-quality envelope with padding",
   },
-  {
-    id: 9,
-    name: "Extra Large Box",
-    price: 9.99,
-    image: product3,
-    description: "Maximum capacity for bulk items",
-  },
-  {
-    id: 10,
-    name: "Poly Mailer",
-    price: 2.49,
-    image: product4,
-    description: "Lightweight waterproof mailer",
-  },
-  {
-    id: 11,
-    name: "Starter Pack",
-    price: 15.99,
-    image: product5,
-    description: "Essential supplies for new shippers",
-  },
-  {
-    id: 12,
-    name: "Deluxe Supplies Kit",
-    price: 34.99,
-    image: product6,
-    description: "Premium kit with all accessories",
-  },
-  {
-    id: 13,
-    name: "Small Box Set",
-    price: 12.99,
-    image: product1,
-    description: "Pack of 5 compact boxes",
-  },
-  {
-    id: 14,
-    name: "Document Mailer",
-    price: 2.29,
-    image: product2,
-    description: "Professional document protection",
-  },
-  {
-    id: 15,
-    name: "Moving Box Bundle",
-    price: 39.99,
-    image: product3,
-    description: "Complete moving box collection",
-  },
-  {
-    id: 16,
-    name: "Fragile Care Pack",
-    price: 24.99,
-    image: product4,
-    description: "Specialized kit for delicate items",
-  },
+
+ 
 ];
 
 const Shop = () => {
