@@ -30,8 +30,8 @@ export default {
           DEFAULT: "#93c5fd", // blue-300
           foreground: "#1e3a8a", // dark blue text
         },
-        background: "#ffffff",
-        foreground: "#1f2937", // gray-800
+        background: "var(--background)",
+        foreground: "var(--foreground)", // gray-800
         border: "#e5e7eb", // gray-200
         muted: {
           DEFAULT: "#6b7280", // gray-500
